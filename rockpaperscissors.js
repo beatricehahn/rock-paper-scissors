@@ -1,17 +1,22 @@
 // this function randomly returns "rock", "paper", or "scissors"
 function computerPlay() {
     let move = Math.floor(Math.random()*3) + 1;
+    let answer = "";
     switch(move){
         case 1:    
-        return "rock";
+            answer = "rock";
             break;
         case 2:
-            return "paper";
+            answer = "paper";
             break;
         case 3:
-            return "scissors";
+            answer = "scissors";
             break;
     }
+
+    let text = `Computer chose: ${answer}`;
+    document.getElementById("computer-move").innerHTML = text;
+    return answer;
 }
 
 // this function plays a single round of rock paper scissors
@@ -23,43 +28,43 @@ function oneRound(playerSelection, computerSelection) {
         case "rock":
             switch(compMove){
                 case "rock":
-                    console.log("tie");
+                    document.getElementById("results").innerHTML = "Tie!";
                     break;
                 case "paper":
-                    console.log("Computer wins this round!");
+                    document.getElementById("results").innerHTML = "Computer wins this round!";
                     break;
                 case "scissors":
-                    console.log("You win this round!");
+                    document.getElementById("results").innerHTML = "You win this round!";
+                    break;
             }
-            break;
         case "paper":
             switch(compMove){
                 case "rock":
-                    console.log("You win this round!");
+                    document.getElementById("results").innerHTML = "You win this round!";
                     break;
                 case "paper":
-                    console.log("tie");
+                    document.getElementById("results").innerHTML = "Tie!";
                     break;
                 case "scissors":
-                    console.log("Computer wins this round!");
+                    document.getElementById("results").innerHTML = "Computer wins this round!";
             }
             break;
         case "scissors":
             switch(compMove){
                 case "rock":
-                    console.log("Computer wins this round!");
+                    document.getElementById("results").innerHTML = "Computer wins this round!";
                     break;
                 case "paper":
-                    console.log("You win this round!");
+                    document.getElementById("results").innerHTML = "You win this round!";
                     break;
                 case "scissors":
-                    console.log("tie");
+                    document.getElementById("results").innerHTML = "Tie!";
             }
             break;
     }
 }
 
-// this function runs 5 rounds of rock paper scissors
+// this function runs until player or computer scores 5 wins
 function game() {
     //stores player's score
     let playerScore = 0;
@@ -69,18 +74,22 @@ function game() {
     let playMove = "";
     let compMove ="";
 
-    //loop through 5 times
-    for (let i = 0; i < 5; i++) {
-        console.log(`entering round ${i+1}`);
-        // store current move from player
-        playMove = prompt("enter your move");
-        //store current move from computer
-        compMove = computerPlay();
+    //buttons is a node list
+    const buttons = document.querySelectorAll('button');
 
-        //call the single round function
-        oneRound(playMove, compMove);
-    }
+    //use .forEach method to iterate through each button
+    buttons.forEach((button) => {
+        //for each button, add an event listener for click
+        button.addEventListener('click', () => {
+            playMove = button.id;
+            let text = `You chose: ${playMove}`;
+            document.getElementById("player-move").innerHTML = text;
+            //generate computer's move
+            compMove = computerPlay();
+            //initiate round
+            oneRound(playMove, compMove);
+        });
+    });
 }
 
-//call game function to initiate a 5 round game of rock paper scissors: player vs computer
 game();
