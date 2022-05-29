@@ -23,42 +23,79 @@ function computerPlay() {
 function oneRound(playerSelection, computerSelection) {
     const playerMove = playerSelection.toLowerCase();
     const compMove = computerSelection.toLowerCase();
+
+    let scoreDisplay = document.querySelector('#score');
+    let score = `Player score: ${playerScore} Computer score: ${compScore}`;
+
     switch(playerMove){
         //if player chooses rock
         case "rock":
             switch(compMove){
                 case "rock":
                     document.getElementById("results").innerHTML = "Tie!";
+                    score = `Player score: ${playerScore} Computer score: ${compScore}`;
+                    scoreDisplay.textContent = score;
                     break;
                 case "paper":
                     document.getElementById("results").innerHTML = "Computer wins this round!";
+                    compScore+=1;
+                    //update score
+                    score = `Player score: ${playerScore} Computer score: ${compScore}`;
+                    scoreDisplay.textContent = score;
                     break;
                 case "scissors":
                     document.getElementById("results").innerHTML = "You win this round!";
+                    playerScore+=1;
+                    //update score
+                    score = `Player score: ${playerScore} Computer score: ${compScore}`;
+                    scoreDisplay.textContent = score;
                     break;
             }
+            break;
         case "paper":
             switch(compMove){
                 case "rock":
                     document.getElementById("results").innerHTML = "You win this round!";
+                    playerScore+=1;
+                    //update score
+                    score = `Player score: ${playerScore} Computer score: ${compScore}`;
+                    scoreDisplay.textContent = score;
                     break;
                 case "paper":
                     document.getElementById("results").innerHTML = "Tie!";
+                    score = `Player score: ${playerScore} Computer score: ${compScore}`;
+                    scoreDisplay.textContent = score;
                     break;
                 case "scissors":
                     document.getElementById("results").innerHTML = "Computer wins this round!";
+                    compScore+=1;
+                    //update score
+                    score = `Player score: ${playerScore} Computer score: ${compScore}`;
+                    scoreDisplay.textContent = score;
+                    break;
             }
             break;
         case "scissors":
             switch(compMove){
                 case "rock":
                     document.getElementById("results").innerHTML = "Computer wins this round!";
+                    compScore+=1;
+                    //update score
+                    score = `Player score: ${playerScore} Computer score: ${compScore}`;
+                    scoreDisplay.textContent = score;
                     break;
                 case "paper":
                     document.getElementById("results").innerHTML = "You win this round!";
+                    playerScore+=1;
+                    //update score
+                    score = `Player score: ${playerScore} Computer score: ${compScore}`;
+                    scoreDisplay.textContent = score;
                     break;
                 case "scissors":
                     document.getElementById("results").innerHTML = "Tie!";
+                    score = `Player score: ${playerScore} Computer score: ${compScore}`;
+                    scoreDisplay.textContent = score;
+                    break;
             }
             break;
     }
@@ -66,11 +103,6 @@ function oneRound(playerSelection, computerSelection) {
 
 // this function runs until player or computer scores 5 wins
 function game() {
-    //stores player's score
-    let playerScore = 0;
-    //stores computer's score
-    let compScore = 0;
-
     let playMove = "";
     let compMove ="";
 
@@ -80,7 +112,7 @@ function game() {
     //use .forEach method to iterate through each button
     buttons.forEach((button) => {
         //for each button, add an event listener for click
-        button.addEventListener('click', () => {
+        button.addEventListener('click', () => {       
             playMove = button.id;
             let text = `You chose: ${playMove}`;
             document.getElementById("player-move").innerHTML = text;
@@ -90,6 +122,9 @@ function game() {
             oneRound(playMove, compMove);
         });
     });
+
 }
 
+let playerScore = 0;
+let compScore = 0;
 game();
