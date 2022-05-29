@@ -1,0 +1,15 @@
+* {
+    font-family: sans-serif;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#img-row {
+    display: flex;
+    flex-wrap: wrap;
+}
