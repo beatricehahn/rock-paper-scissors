@@ -1,19 +1,29 @@
 * {
     font-family: sans-serif;
     background: #EEF2F7;
+    color: rgb(76, 67, 78);
 }
 
 #container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    height: 100%;
+}
+
+#game-header {
+    font-size: 50px;
 }
 
 #img-row {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
+}
+
+img {
+    width: 200px;
+    height: 200px;
 }
 
 button {
@@ -27,4 +37,12 @@ button {
     0 22.3px 17.9px rgba(0, 0, 0, 0.072),
     0 41.8px 33.4px rgba(0, 0, 0, 0.086),
     0 100px 80px rgba(0, 0, 0, 0.12)
+}
+
+.result-display {
+    font-size: 25px;
+}
+
+#results {
+    margin-top: 150px;
 }
