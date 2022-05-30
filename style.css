@@ -46,3 +46,11 @@ button {
 #results {
     margin-top: 150px;
 }
+
+#replay-btn {
+    padding: 10px 25px;
+    border-radius: 20px;
+    background:linear-gradient(to right,rgb(42, 241, 165), rgb(26, 242, 250));
+    font-family: "Open Sans";
+    font-weight: 400;
+}
