@@ -107,7 +107,7 @@ function game() {
     let compMove ="";
 
     //buttons is a node list
-    const buttons = document.querySelectorAll('button');
+    const buttons = document.querySelectorAll('.choice');
 
     //use .forEach method to iterate through each button
     buttons.forEach((button) => {
@@ -145,6 +145,20 @@ function game() {
         });
     });
 
+    //replay button resets all display text
+    const replayBtn = document.querySelector('#replay-btn');
+    replayBtn.addEventListener('click', () => {
+        //reset player score
+        playerScore = 0;
+        //reset computer score
+        compScore = 0;
+        //reset all choice texts
+        document.getElementById("player-move").innerHTML = "";
+        document.getElementById("computer-move").innerHTML = "";
+        document.getElementById("score").innerHTML = "";
+        //reset results display text
+        document.getElementById("results").innerHTML = "";
+    });
 }
 
 let playerScore = 0;
