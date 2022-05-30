@@ -113,13 +113,35 @@ function game() {
     buttons.forEach((button) => {
         //for each button, add an event listener for click
         button.addEventListener('click', () => {       
-            playMove = button.id;
-            let text = `You chose: ${playMove}`;
-            document.getElementById("player-move").innerHTML = text;
-            //generate computer's move
-            compMove = computerPlay();
-            //initiate round
-            oneRound(playMove, compMove);
+            //initiate round after checking no winning player
+            if (playerScore < 5 && compScore < 5){
+                playMove = button.id;
+                let text = `You chose: ${playMove}`;
+                document.getElementById("player-move").innerHTML = text;
+                //generate computer's move
+                compMove = computerPlay();
+                //initiate one round of rps
+                oneRound(playMove, compMove);
+            }
+            else {
+                document.getElementById("results").innerHTML = "Game Over!"
+                let finalResult ="";
+                //player is overall winner
+                if (playerScore > compScore) {
+                    finalResult = `You win overall, with  ${playerScore} wins!`;
+                    document.getElementById("score").innerHTML = finalResult;
+                }
+                //computer winsoverall
+                else if (playerScore < compScore) {
+                    finalResult =  `Computer wins overall, with ${compScore} wins!`;
+                    document.getElementById("score").innerHTML = finalResult;
+                }
+                //tie
+                else {
+                    finalResult = `Tie overall, ${playerScore} to ${compScore}`;
+                    document.getElementById("score").innerHTML = finalResult;
+                }
+            }
         });
     });
 
