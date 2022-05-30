@@ -36,19 +36,66 @@ function oneRound(playerSelection, computerSelection) {
                     score = `Player score: ${playerScore} Computer score: ${compScore}`;
                     scoreDisplay.textContent = score;
                     break;
+
                 case "paper":
                     document.getElementById("results").innerHTML = "Computer wins this round!";
                     compScore+=1;
-                    //update score
-                    score = `Player score: ${playerScore} Computer score: ${compScore}`;
-                    scoreDisplay.textContent = score;
+                    // if this is the final round
+                    if (playerScore == 5 || compScore == 5){
+                        document.getElementById("results").innerHTML = "Game Over!"
+                        let finalResult ="";
+                        //player is overall winner
+                        if (playerScore > compScore) {
+                            finalResult = `You win overall, with  ${playerScore} wins!`;
+                            document.getElementById("score").innerHTML = finalResult;
+                        }
+                        //computer winsoverall
+                        else if (playerScore < compScore) {
+                            finalResult =  `Computer wins overall, with ${compScore} wins!`;
+                            document.getElementById("score").innerHTML = finalResult;
+                        }
+                        //tie
+                        else {
+                            finalResult = `Tie overall, ${playerScore} to ${compScore}`;
+                            document.getElementById("score").innerHTML = finalResult;
+                        }
+                    }
+
+                    else {
+                        //update score
+                        score = `Player score: ${playerScore} Computer score: ${compScore}`;
+                        scoreDisplay.textContent = score;
+                    }
                     break;
+
                 case "scissors":
                     document.getElementById("results").innerHTML = "You win this round!";
                     playerScore+=1;
-                    //update score
-                    score = `Player score: ${playerScore} Computer score: ${compScore}`;
-                    scoreDisplay.textContent = score;
+
+                    if (playerScore == 5 || compScore == 5){
+                        document.getElementById("results").innerHTML = "Game Over!"
+                        let finalResult ="";
+                        //player is overall winner
+                        if (playerScore > compScore) {
+                            finalResult = `You win overall, with  ${playerScore} wins!`;
+                            document.getElementById("score").innerHTML = finalResult;
+                        }
+                        //computer winsoverall
+                        else if (playerScore < compScore) {
+                            finalResult =  `Computer wins overall, with ${compScore} wins!`;
+                            document.getElementById("score").innerHTML = finalResult;
+                        }
+                        //tie
+                        else {
+                            finalResult = `Tie overall, ${playerScore} to ${compScore}`;
+                            document.getElementById("score").innerHTML = finalResult;
+                        }
+                    }
+                    else {
+                        //update score
+                        score = `Player score: ${playerScore} Computer score: ${compScore}`;
+                        scoreDisplay.textContent = score;
+                    }
                     break;
             }
             break;
@@ -57,20 +104,68 @@ function oneRound(playerSelection, computerSelection) {
                 case "rock":
                     document.getElementById("results").innerHTML = "You win this round!";
                     playerScore+=1;
-                    //update score
-                    score = `Player score: ${playerScore} Computer score: ${compScore}`;
-                    scoreDisplay.textContent = score;
+                    // if this is the final round
+                    if (playerScore == 5 || compScore == 5){
+                        document.getElementById("results").innerHTML = "Game Over!"
+                        let finalResult ="";
+                        //player is overall winner
+                        if (playerScore > compScore) {
+                            finalResult = `You win overall, with  ${playerScore} wins!`;
+                            document.getElementById("score").innerHTML = finalResult;
+                        }
+                        //computer winsoverall
+                        else if (playerScore < compScore) {
+                            finalResult =  `Computer wins overall, with ${compScore} wins!`;
+                            document.getElementById("score").innerHTML = finalResult;
+                        }
+                        //tie
+                        else {
+                            finalResult = `Tie overall, ${playerScore} to ${compScore}`;
+                            document.getElementById("score").innerHTML = finalResult;
+                        }
+                    }
+
+                    else {
+                        //update score
+                        score = `Player score: ${playerScore} Computer score: ${compScore}`;
+                        scoreDisplay.textContent = score;
+                    }
                     break;
+
                 case "paper":
                     document.getElementById("results").innerHTML = "Tie!";
                     score = `Player score: ${playerScore} Computer score: ${compScore}`;
                     scoreDisplay.textContent = score;
                     break;
+
                 case "scissors":
                     document.getElementById("results").innerHTML = "Computer wins this round!";
                     compScore+=1;
-                    //update score
-                    score = `Player score: ${playerScore} Computer score: ${compScore}`;
+                    // if this is the final round
+                    if (playerScore == 5 || compScore == 5){
+                        document.getElementById("results").innerHTML = "Game Over!"
+                        let finalResult ="";
+                        //player is overall winner
+                        if (playerScore > compScore) {
+                            finalResult = `You win overall, with  ${playerScore} wins!`;
+                            document.getElementById("score").innerHTML = finalResult;
+                        }
+                        //computer winsoverall
+                        else if (playerScore < compScore) {
+                            finalResult =  `Computer wins overall, with ${compScore} wins!`;
+                            document.getElementById("score").innerHTML = finalResult;
+                        }
+                        //tie
+                        else {
+                            finalResult = `Tie overall, ${playerScore} to ${compScore}`;
+                            document.getElementById("score").innerHTML = finalResult;
+                        }
+                    }
+
+                    else {
+                        //update score
+                        score = `Player score: ${playerScore} Computer score: ${compScore}`;
+                    }
                     scoreDisplay.textContent = score;
                     break;
             }
@@ -80,17 +175,65 @@ function oneRound(playerSelection, computerSelection) {
                 case "rock":
                     document.getElementById("results").innerHTML = "Computer wins this round!";
                     compScore+=1;
-                    //update score
-                    score = `Player score: ${playerScore} Computer score: ${compScore}`;
-                    scoreDisplay.textContent = score;
+                    // if this is the final round
+                    if (playerScore == 5 || compScore == 5){
+                        document.getElementById("results").innerHTML = "Game Over!"
+                        let finalResult ="";
+                        //player is overall winner
+                        if (playerScore > compScore) {
+                            finalResult = `You win overall, with  ${playerScore} wins!`;
+                            document.getElementById("score").innerHTML = finalResult;
+                        }
+                        //computer winsoverall
+                        else if (playerScore < compScore) {
+                            finalResult =  `Computer wins overall, with ${compScore} wins!`;
+                            document.getElementById("score").innerHTML = finalResult;
+                        }
+                        //tie
+                        else {
+                            finalResult = `Tie overall, ${playerScore} to ${compScore}`;
+                            document.getElementById("score").innerHTML = finalResult;
+                        }
+                    }
+
+                    else {
+                        //update score
+                        score = `Player score: ${playerScore} Computer score: ${compScore}`;
+                        scoreDisplay.textContent = score;
+                    }
                     break;
+
                 case "paper":
                     document.getElementById("results").innerHTML = "You win this round!";
                     playerScore+=1;
-                    //update score
-                    score = `Player score: ${playerScore} Computer score: ${compScore}`;
-                    scoreDisplay.textContent = score;
+                    // if this is the final round
+                    if (playerScore == 5 || compScore == 5){
+                        document.getElementById("results").innerHTML = "Game Over!"
+                        let finalResult ="";
+                        //player is overall winner
+                        if (playerScore > compScore) {
+                            finalResult = `You win overall, with  ${playerScore} wins!`;
+                            document.getElementById("score").innerHTML = finalResult;
+                        }
+                        //computer winsoverall
+                        else if (playerScore < compScore) {
+                            finalResult =  `Computer wins overall, with ${compScore} wins!`;
+                            document.getElementById("score").innerHTML = finalResult;
+                        }
+                        //tie
+                        else {
+                            finalResult = `Tie overall, ${playerScore} to ${compScore}`;
+                            document.getElementById("score").innerHTML = finalResult;
+                        }
+                    }
+
+                    else {
+                        //update score
+                        score = `Player score: ${playerScore} Computer score: ${compScore}`;
+                        scoreDisplay.textContent = score;
+                    }
                     break;
+
                 case "scissors":
                     document.getElementById("results").innerHTML = "Tie!";
                     score = `Player score: ${playerScore} Computer score: ${compScore}`;
