@@ -26,8 +26,8 @@
 }
 
 img {
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
 }
 
 button {
@@ -114,7 +114,7 @@ button {
     }
 }
 
-@media only screen and (orientation: landscape) { 
+@media only screen and (max-width: 850px) and (orientation: landscape) { 
     #game-header {
         font-size: 30px;
     }
