@@ -15,6 +15,10 @@
     font-size: 50px;
 }
 
+.result-display {
+    padding: 0px;
+}
+
 #img-row {
     display: flex;
     flex-wrap: wrap;
@@ -41,6 +45,7 @@ button {
 
 .result-display {
     font-size: 25px;
+    margin-bottom: 20px;
 }
 
 #results {
@@ -53,4 +58,79 @@ button {
     background:linear-gradient(to right,rgb(42, 241, 165), rgb(26, 242, 250));
     font-family: "Open Sans";
     font-weight: 400;
+}
+
+@media screen and (max-width: 300px) {
+    #container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+    #game-header {
+        font-size: 10px;
+    }
+    p {
+        font-size: 5px;
+        margin: 5px;
+    }
+    #img-row {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+    .choice {
+        width: 100px;
+        height: 100px;
+    }
+    img {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    #game-header {
+        font-size: 30px;
+    }
+    p {
+        font-size: 5px;
+        margin: 5px;
+    }
+    #img-row {
+        display: flex;
+        gap: 20px;
+    }
+    .choice {
+        width: 100px;
+        height: 100px;
+    }
+    img {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media only screen and (orientation: landscape) { 
+    #game-header {
+        font-size: 30px;
+    }
+    p {
+        margin: 0px;
+    }
+    #img-row {
+        display: flex;
+        gap: 40px;
+    }
+    .choice {
+        width: 150px;
+        height: 150px;
+    }
+    img {
+        width: 120px;
+        height: 120px;
+    }
 }
