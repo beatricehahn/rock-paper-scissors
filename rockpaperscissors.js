@@ -25,7 +25,7 @@ function oneRound(playerSelection, computerSelection) {
     const compMove = computerSelection.toLowerCase();
 
     let scoreDisplay = document.querySelector('#score');
-    let score = `Player score: ${playerScore} Computer score: ${compScore}`;
+    let score = `Player: ${playerScore}  Computer: ${compScore}`;
 
     switch(playerMove){
         //if player chooses rock
@@ -33,7 +33,7 @@ function oneRound(playerSelection, computerSelection) {
             switch(compMove){
                 case "rock":
                     document.getElementById("results").innerHTML = "Tie!";
-                    score = `Player score: ${playerScore} Computer score: ${compScore}`;
+                    score = `Player: ${playerScore}  Computer: ${compScore}`;
                     scoreDisplay.textContent = score;
                     break;
 
@@ -63,7 +63,7 @@ function oneRound(playerSelection, computerSelection) {
 
                     else {
                         //update score
-                        score = `Player score: ${playerScore} Computer score: ${compScore}`;
+                        score = `Player: ${playerScore}  Computer: ${compScore}`;
                         scoreDisplay.textContent = score;
                     }
                     break;
@@ -93,7 +93,7 @@ function oneRound(playerSelection, computerSelection) {
                     }
                     else {
                         //update score
-                        score = `Player score: ${playerScore} Computer score: ${compScore}`;
+                        score = `Player: ${playerScore}  Computer: ${compScore}`;
                         scoreDisplay.textContent = score;
                     }
                     break;
@@ -127,14 +127,14 @@ function oneRound(playerSelection, computerSelection) {
 
                     else {
                         //update score
-                        score = `Player score: ${playerScore} Computer score: ${compScore}`;
+                        score = `Player: ${playerScore}  Computer: ${compScore}`;
                         scoreDisplay.textContent = score;
                     }
                     break;
 
                 case "paper":
                     document.getElementById("results").innerHTML = "Tie!";
-                    score = `Player score: ${playerScore} Computer score: ${compScore}`;
+                    score = `Player: ${playerScore}  Computer: ${compScore}`;
                     scoreDisplay.textContent = score;
                     break;
 
@@ -164,7 +164,7 @@ function oneRound(playerSelection, computerSelection) {
 
                     else {
                         //update score
-                        score = `Player score: ${playerScore} Computer score: ${compScore}`;
+                        score = `Player: ${playerScore}  Computer: ${compScore}`;
                     }
                     scoreDisplay.textContent = score;
                     break;
@@ -198,7 +198,7 @@ function oneRound(playerSelection, computerSelection) {
 
                     else {
                         //update score
-                        score = `Player score: ${playerScore} Computer score: ${compScore}`;
+                        score = `Player: ${playerScore}  Computer: ${compScore}`;
                         scoreDisplay.textContent = score;
                     }
                     break;
@@ -229,14 +229,14 @@ function oneRound(playerSelection, computerSelection) {
 
                     else {
                         //update score
-                        score = `Player score: ${playerScore} Computer score: ${compScore}`;
+                        score = `Player: ${playerScore}  Computer: ${compScore}`;
                         scoreDisplay.textContent = score;
                     }
                     break;
 
                 case "scissors":
                     document.getElementById("results").innerHTML = "Tie!";
-                    score = `Player score: ${playerScore} Computer score: ${compScore}`;
+                    score = `Player: ${playerScore}  Computer: ${compScore}`;
                     scoreDisplay.textContent = score;
                     break;
             }
