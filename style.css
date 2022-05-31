@@ -53,11 +53,11 @@ button {
 }
 
 #replay-btn {
-    padding: 10px 25px;
-    border-radius: 20px;
+    padding: 15px 60px;
+    border-radius: 40px;
     background:linear-gradient(to right,rgb(42, 241, 165), rgb(26, 242, 250));
     font-family: "Open Sans";
-    font-weight: 400;
+    font-size: 30px;
 }
 
 @media screen and (max-width: 300px) {
