@@ -90,6 +90,10 @@ button {
         width: 80px;
         height: 80px;
     }
+    #replay-button {
+        padding: 15px 25px;
+        border-radius: 20px;
+    }
 }
 
 @media screen and (max-width: 420px) {
@@ -112,6 +116,11 @@ button {
         width: 80px;
         height: 80px;
     }
+    #replay-btn {
+        padding: 10px 30px;
+        border-radius: 30px;
+        font-size: 15px;
+    }
 }
 
 @media only screen and (max-width: 850px) and (orientation: landscape) { 
@@ -132,5 +141,10 @@ button {
     img {
         width: 120px;
         height: 120px;
+    }
+    #replay-btn {
+        padding: 10px 30px;
+        border-radius: 30px;
+        font-size: 15px;
     }
 }
